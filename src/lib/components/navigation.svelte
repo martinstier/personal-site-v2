@@ -1,7 +1,9 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+
   export let className: string = "";
 
-  let images = [
+  const images = [
     "/images/image0.jpg",
     "/images/image1.jpeg",
     "/images/image2.jpg",
@@ -17,13 +19,12 @@
     current = index;
   }
 
+  const sections = ["about", "experience", "projects", "directory"];
+
   function scrollToSection(id: string) {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
 </script>
@@ -31,7 +32,7 @@
 <nav class="flex flex-col gap-4 fixed z-50 top-8 {className}">
   <!-- Image carousel -->
   <div class="image-carousel">
-    <div class="w-70 h-70 overflow-hidden rounded-xl">
+    <div class="w-60 h-50 overflow-hidden rounded-xl">
       <!-- svelte-ignore a11y_click_events_have_key_events -->
       <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
       <img
@@ -56,37 +57,18 @@
         ></div>
       {/each}
     </div>
+
+    {#each sections as section}
+      <button
+        type="button"
+        class="cursor-pointer rounded-full w-50"
+        onclick={() => scrollToSection(section)}
+      >
+        <!-- {currentSection === section
+        ? 'bg-blue-600 text-white'
+        : 'hover:text-white hover:bg-blue-600'}" -->
+        {section.charAt(0).toUpperCase() + section.slice(1)}
+      </button>
+    {/each}
   </div>
-
-  <button
-    type="button"
-    class="cursor-pointer"
-    onclick={() => scrollToSection("about")}
-  >
-    About
-  </button>
-
-  <button
-    type="button"
-    class="cursor-pointer"
-    onclick={() => scrollToSection("experience")}
-  >
-    Experience
-  </button>
-
-  <button
-    type="button"
-    class="cursor-pointer"
-    onclick={() => scrollToSection("projects")}
-  >
-    Projects
-  </button>
-
-  <button
-    type="button"
-    class="cursor-pointer"
-    onclick={() => scrollToSection("directory")}
-  >
-    Directory
-  </button>
 </nav>

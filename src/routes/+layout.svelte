@@ -11,7 +11,7 @@
 </svelte:head>
 
 <div class="flex">
-  <Nav className="w-64 h-screen fixed left-0 top-0" />
+  <Nav className="w-64 h-screen fixed left-0 top-0 border-r" />
   <main class="ml-64 flex-1 h-screen overflow-y-auto p-8">
     {@render children()}
   </main>
