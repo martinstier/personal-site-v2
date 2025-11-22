@@ -1,10 +1,22 @@
-<h1>Hi I am Martin.</h1>
-<ul>
-  <li>About</li>
-  <li>About</li>
-  <li>About</li>
-</ul>
-<p>
-  Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the
-  documentation
-</p>
+<script lang="ts">
+  import About from "$lib/components/about.svelte";
+  import Experience from "$lib/components/experience.svelte";
+  import Projects from "$lib/components/projects.svelte";
+  import Directory from "$lib/components/directory.svelte";
+</script>
+
+<div id="about">
+  <About className="mb-80" />
+</div>
+
+<div id="experience">
+  <Experience className="mb-80" />
+</div>
+
+<div id="projects">
+  <Projects className="mb-80" />
+</div>
+
+<div id="directory">
+  <Directory className="mb-80" />
+</div>
