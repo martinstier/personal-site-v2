@@ -32,7 +32,7 @@
 <nav class="flex flex-col gap-4 fixed z-50 top-8 {className}">
   <!-- Image carousel -->
   <div class="image-carousel">
-    <div class="w-60 h-50 overflow-hidden rounded-xl">
+    <div class="w-90 h-70 overflow-hidden rounded-xl">
       <!-- svelte-ignore a11y_click_events_have_key_events -->
       <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
       <img

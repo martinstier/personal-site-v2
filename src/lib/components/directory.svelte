@@ -3,5 +3,8 @@
 </script>
 
 <div class={className}>
-  <p>Martin is friends with hugh jacks and jack lille yerrington and ben neumaier and even andrew price</p>
+  <p>
+    Directory: Martin is friends with hugh jacks and jack lille yerrington and
+    ben neumaier and even andrew price
+  </p>
 </div>

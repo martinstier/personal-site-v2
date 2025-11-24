@@ -1,2 +1,8 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+body {
+    font-family: 'Host Grotesk', sans-serif;
+    font-size: 3.8rem;
+    font-weight: 400;
+}
