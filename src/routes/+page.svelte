@@ -6,17 +6,17 @@
 </script>
 
 <div id="about">
-  <About className="mb-80" />
+  <About className="mb-20" />
 </div>
 
 <div id="experience">
-  <Experience className="mb-80" />
+  <Experience className="mb-20" />
 </div>
 
 <div id="projects">
-  <Projects className="mb-80" />
+  <Projects className="mb-20" />
 </div>
 
 <div id="directory">
-  <Directory className="mb-80" />
+  <Directory className="mb-20" />
 </div>

@@ -3,6 +3,8 @@
 
 body {
     font-family: 'Host Grotesk', sans-serif;
-    font-size: 3.8rem;
-    font-weight: 400;
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: black;
+    background-color: #F2F0EF;
 }
