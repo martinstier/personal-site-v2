@@ -5,12 +5,24 @@ body {
     font-family: 'Host Grotesk', sans-serif;
     font-size: 4rem;
     font-weight: 500;
-    color: black;
+    color: "black";
     background-color: #F2F0EF;
-    line-height: 1.2;
+    line-height: 1.334;
+    /* cursor: cell; */
 }
 
 p {
     font-size: 3.75rem;
     /* text-align: justify; */
+}
+
+::selection {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* For Mozilla Firefox */
+::-moz-selection {
+  background-color: #000000;
+  color: #ffffff;
 }

@@ -12,7 +12,7 @@
     // "/images/img5.JPG",
     // "/images/img6.JPG",
     // "/images/img7.jpg",
-    "/images/img8.jpg",
+    // "/images/img8.jpg",
     "/images/img9.JPG",
     "/images/img10.jpg",
     "/images/img11.JPG",
@@ -24,7 +24,7 @@
     // "/images/img17.jpg",
   ];
 
-  let current = 4;
+  let current = 3;
 
   function next() {
     current = (current + 1) % images.length;
@@ -38,7 +38,7 @@
 
   function startRotation() {
     if (!interval) {
-      interval = setInterval(next, 150);
+      interval = setInterval(next, 125);
     }
   }
 
@@ -48,7 +48,7 @@
       interval = null;
     }
 
-    current = 4;
+    current = 3;
   }
 
   const sections = ["about", "experience", "projects", "directory"];
@@ -93,7 +93,7 @@
     {#each sections as section}
       <button
         type="button"
-        class="cursor-pointer rounded-full w-50"
+        class="cursor-cell"
         onclick={() => scrollToSection(section)}
       >
         <!-- {currentSection === section
