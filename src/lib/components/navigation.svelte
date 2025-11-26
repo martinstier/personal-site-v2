@@ -73,19 +73,17 @@
   <!-- Image carousel -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
-    class="image-carousel"
+    class="w-75 h-75 overflow-hidden rounded-xs"
     onmouseenter={startRotation}
     onmouseleave={stopRotation}
   >
-    <div class="w-75 h-75 overflow-hidden rounded-xs">
-      <!-- svelte-ignore a11y_click_events_have_key_events -->
-      <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-      <img
-        class="w-full h-full object-cover select-none"
-        src={images[current]}
-        alt="Images of Martin."
-      />
-    </div>
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
+    <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+    <img
+      class="w-full h-full object-cover select-none"
+      src={images[current]}
+      alt="Images of Martin."
+    />
   </div>
 
   <!-- Sections -->
