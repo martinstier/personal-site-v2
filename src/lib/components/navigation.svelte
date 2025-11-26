@@ -44,7 +44,8 @@
   }
 </script>
 
-<nav class="flex flex-col gap-0 fixed z-50 top-8 {className}">
+<!-- <nav class="pl-8 flex flex-col gap-0 fixed z-50 top-8 {className}"> -->
+<nav class="pl-8 top-8 {className}">
   <!-- Image carousel -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
@@ -52,7 +53,7 @@
     onmouseenter={startRotation}
     onmouseleave={stopRotation}
   >
-    <div class="w-70 h-70 overflow-hidden rounded-sm">
+    <div class="w-75 h-75 overflow-hidden rounded-xs">
       <!-- svelte-ignore a11y_click_events_have_key_events -->
       <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
       <img
@@ -63,16 +64,21 @@
     </div>
   </div>
 
-  {#each sections as section}
-    <button
-      type="button"
-      class="cursor-pointer rounded-full w-50"
-      onclick={() => scrollToSection(section)}
-    >
-      <!-- {currentSection === section
+  <!-- Sections -->
+  <div class="fixed bottom-8 left-0 pl-8 flex flex-col">
+    {#each sections as section}
+      <button
+        type="button"
+        class="cursor-pointer rounded-full w-50"
+        onclick={() => scrollToSection(section)}
+      >
+        <!-- {currentSection === section
         ? 'bg-blue-600 text-white'
         : 'hover:text-white hover:bg-blue-600'}" -->
-      {section.charAt(0).toUpperCase() + section.slice(1)}
-    </button>
-  {/each}
+        <p class="text-left">
+          {section.charAt(0).toUpperCase() + section.slice(1)}
+        </p>
+      </button>
+    {/each}
+  </div>
 </nav>

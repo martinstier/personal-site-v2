@@ -4,12 +4,15 @@
 
 <div class={className}>
   <p>
-    Experience: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-    est laborum.
+    Martín is currently a software engineer at <span
+      class="bg-[#0385FF] text-[#EAFFD9]">CHEPS</span
+    >. He develops and maintains staff management software for state-run
+    psychiatric hospitals in Michigan. Martín has previously interned at
+    <span class="bg-[#0385FF] text-[#EAFFD9]">PromethistAI</span>; taught
+    <span class="bg-[#0385FF] text-[#EAFFD9]">physics</span> and
+    <span class="bg-[#0385FF] text-[#EAFFD9]">calculus</span>; and worked at the
+    <span class="bg-[#0385FF] text-[#EAFFD9]"
+      >Institute for Social Research</span
+    >.
   </p>
 </div>

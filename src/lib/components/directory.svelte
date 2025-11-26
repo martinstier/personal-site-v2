@@ -3,8 +3,5 @@
 </script>
 
 <div class={className}>
-  <p>
-    Directory: Martin is friends with hugh jacks and jack lille yerrington and
-    ben neumaier and even andrew price
-  </p>
+  <p>People who's work I admire and/or who's presence I enjoy.</p>
 </div>

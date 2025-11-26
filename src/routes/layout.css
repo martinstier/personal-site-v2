@@ -1,10 +1,16 @@
 @import 'tailwindcss';
-@plugin '@tailwindcss/typography';
+/* @plugin '@tailwindcss/typography'; */
 
 body {
     font-family: 'Host Grotesk', sans-serif;
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 500;
     color: black;
     background-color: #F2F0EF;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 3.75rem;
+    /* text-align: justify; */
 }

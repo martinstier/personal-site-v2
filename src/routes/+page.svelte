@@ -5,18 +5,20 @@
   import Directory from "$lib/components/directory.svelte";
 </script>
 
-<div id="about">
-  <About className="mb-20" />
-</div>
+<div class="pr-8">
+  <div id="about">
+    <About className="mb-20" />
+  </div>
 
-<div id="experience">
-  <Experience className="mb-20" />
-</div>
+  <div id="experience">
+    <Experience className="mb-20" />
+  </div>
 
-<div id="projects">
-  <Projects className="mb-20" />
-</div>
+  <div id="projects">
+    <Projects className="mb-20" />
+  </div>
 
-<div id="directory">
-  <Directory className="mb-20" />
+  <div id="directory">
+    <Directory className="mb-20" />
+  </div>
 </div>
