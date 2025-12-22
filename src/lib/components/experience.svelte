@@ -4,8 +4,9 @@
 
 <div class={className}>
   <p>
-    Martín is currently a software engineer at <span
-      class="bg-[#248C54] text-[#EAFFD9]"
+    <span class="bg-[#777777]">Martin</span> Martín is currently a software
+    engineer at
+    <span class="bg-[#248C54] text-[#EAFFD9]"
       ><a
         href="https://cheps.engin.umich.edu/"
         target="_blank"

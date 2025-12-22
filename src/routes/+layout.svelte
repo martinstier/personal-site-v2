@@ -24,7 +24,7 @@
   <nav class="hidden lg:block">
     <Nav className="w-94 h-screen fixed left-0 top-0" />
   </nav>
-  <main class="flex-1 h-screen overflow-y-auto p-8 lg:ml-94">
+  <main class="flex-1 h-screen overflow-y-auto pt-7.5 p-8 lg:ml-94">
     {@render children()}
   </main>
 </div>
