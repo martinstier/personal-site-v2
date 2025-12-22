@@ -57,18 +57,22 @@
     const el = document.getElementById(id);
 
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      //   const y = el.getBoundingClientRect().top + window.scrollY - 8;
+      const mainElement = document.querySelector("main");
+      if (mainElement) {
+        const rect = el.getBoundingClientRect();
+        const mainRect = mainElement.getBoundingClientRect();
+        const scrollTop = mainElement.scrollTop;
 
-      //   window.scrollTo({
-      //     top: y,
-      //     behavior: "smooth",
-      //   });
+        const offset = rect.top - mainRect.top + scrollTop - 30;
+        mainElement.scrollTo({
+          top: offset,
+          behavior: "smooth",
+        });
+      }
     }
   }
 </script>
 
-<!-- <nav class="pl-8 flex flex-col gap-0 fixed z-50 top-8 {className}"> -->
 <nav
   class="fixed left-0 top-0 h-screen pl-8 p-8 pr-4 flex flex-col gap-6 overflow-y-auto {className}"
 >
