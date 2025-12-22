@@ -38,7 +38,7 @@
 
   function startRotation() {
     if (!interval) {
-      interval = setInterval(next, 125);
+      interval = setInterval(next, 175);
     }
   }
 
