@@ -87,7 +87,7 @@
   </div>
 
   <!-- Sections -->
-  <div class="flex flex-col gap-1 mt-auto">
+  <div class="flex flex-col mt-auto">
     {#each sections as section}
       <button
         type="button"
