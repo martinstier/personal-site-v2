@@ -137,7 +137,7 @@
     {#each sections as section}
       <button
         type="button"
-        class="cursor-cell text-left {activeSection === section
+        class="pl-1 cursor-cell text-left {activeSection === section
           ? 'bg-[#000000] text-[#F2F0EF]'
           : ''}"
         onclick={() => scrollToSection(section)}
