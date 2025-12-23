@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
 
   export let className: string = "";
 
@@ -53,24 +53,70 @@
 
   const sections = ["about", "experience", "projects", "directory"];
 
+  let activeSection: string = sections[0];
+  let mainElement: HTMLElement | null = null;
+  let ticking = false;
+  const TOP_OFFSET = 40; // pixels from the top of the main scroll area
+
+  function updateActiveSection() {
+    if (!mainElement) return;
+    const mainTop = mainElement.getBoundingClientRect().top;
+    let current = sections[0];
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      const top = el.getBoundingClientRect().top - mainTop;
+      if (top <= TOP_OFFSET) {
+        current = id;
+      } else {
+        // as soon as we find a section below the threshold, stop
+        break;
+      }
+    }
+    activeSection = current;
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(updateActiveSection);
+    }
+  }
+
   function scrollToSection(id: string) {
     const el = document.getElementById(id);
 
     if (el) {
-      const mainElement = document.querySelector("main");
-      if (mainElement) {
+      const mainEl = document.querySelector("main");
+      if (mainEl) {
         const rect = el.getBoundingClientRect();
-        const mainRect = mainElement.getBoundingClientRect();
-        const scrollTop = mainElement.scrollTop;
+        const mainRect = mainEl.getBoundingClientRect();
+        const scrollTop = (mainEl as HTMLElement).scrollTop;
 
         const offset = rect.top - mainRect.top + scrollTop - 30;
-        mainElement.scrollTo({
+        (mainEl as HTMLElement).scrollTo({
           top: offset,
           behavior: "smooth",
         });
       }
     }
   }
+
+  onMount(() => {
+    mainElement = document.querySelector("main");
+    if (!mainElement) return;
+    mainElement.addEventListener("scroll", onScroll, { passive: true });
+    // initialize once
+    updateActiveSection();
+  });
+
+  onDestroy(() => {
+    if (mainElement) {
+      mainElement.removeEventListener("scroll", onScroll);
+      mainElement = null;
+    }
+  });
 </script>
 
 <nav
@@ -95,7 +141,7 @@
     {#each sections as section}
       <button
         type="button"
-        class="cursor-cell text-left"
+        class="cursor-cell text-left {activeSection === section ? 'bg-[#000000] text-[#FFFFFF]' : ''}"
         onclick={() => scrollToSection(section)}
       >
         <p>
