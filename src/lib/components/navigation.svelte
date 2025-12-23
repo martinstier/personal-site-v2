@@ -49,7 +49,6 @@
 
   const sections = ["about", "work", "projects", "directory"];
 
-  let activeSection: string = sections[0];
   let mainElement: HTMLElement | null = null;
   let ticking = false;
   const TOP_OFFSET = 40; // pixels from the top of the main scroll area
@@ -81,39 +80,6 @@
   }
 
   let activeSection: string = sections[0];
-
-  onMount(() => {
-    const mainElement = document.querySelector("main");
-    if (!mainElement) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            const id = (entry.target as HTMLElement).id;
-            if (sections.includes(id)) {
-              activeSection = id;
-            }
-          }
-        }
-      },
-      {
-        root: mainElement,
-        threshold: 0.6,
-        // Account for top padding by shrinking the top root area
-        rootMargin: "-32px 0px 0px 0px",
-      }
-    );
-
-    for (const id of sections) {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    }
-
-    return () => observer.disconnect();
-  });
 
   function scrollToSection(id: string) {
     const el = document.getElementById(id);
@@ -173,7 +139,7 @@
       <button
         type="button"
         class="pl-1 cursor-cell text-left {activeSection === section
-          ? 'bg-[#000000] text-[#F2F0EF]'
+          ? 'bg-[#000000] text-[#F2F0EF]' // rounded-xs'
           : ''}"
         onclick={() => scrollToSection(section)}
       >

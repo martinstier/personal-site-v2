@@ -37,6 +37,6 @@
       ><a href="https://isr.umich.edu/" target="_blank" class="cursor-alias"
         >Institute for Social Research</a
       >
-    </span>
+    </span>.
   </p>
 </div>

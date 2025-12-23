@@ -1,20 +1,15 @@
 <script lang="ts">
   export let className: string = "";
+  import Project from "$lib/components/project.svelte";
 </script>
 
 <div class={className}>
-  <p><span class="bg-[#4750DD] text-[#EAFFD9]">SH Staffing</span> @ CHEPS</p>
-  <p>
-    <span class="bg-[#F5BF0F] text-[#000000]">Infatrode</span> w/ Jack LY, Ben N,
-    Connor D @ MHacks 2025
-  </p>
-  <p>
-    ⇥ Full-stack social media platform.
-    <i>"The instangramt killer."</i>
-  </p>
-  <p>
-    ⇥ A novel social media approach: mapping relationships between people,
-    things, and concepts.
-  </p>
-  <p>PeteCode</p>
+  <Project
+    title="Infatrode"
+    collaborators={["Jack LY", "Ben N", "Connor D"]}
+    location="MHacks 2025"
+    description="A novel social media approach: mapping relationships between people, things, and concepts."
+    images={["/images/infatrode.gif"]}
+    color="#F5BF0F"
+  />
 </div>
