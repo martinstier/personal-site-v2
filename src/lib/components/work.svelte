@@ -11,8 +11,8 @@
         target="_blank"
         class="cursor-alias">CHEPS</a
       ></span
-    >. He develops staff management software for hospitals in Michigan. Martín
-    has previously interned at
+    >, where he develops staff management software for hospitals in Michigan.
+    Martín has previously interned at
     <span class="bg-[#4750DD] text-[#EAFFD9]"
       ><a href="https://promethist.ai/" target="_blank" class="cursor-alias"
         >PromethistAI</a

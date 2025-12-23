@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
 
   export let className: string = "";
 
@@ -30,10 +30,6 @@
     current = (current + 1) % images.length;
   }
 
-  // function goTo(index: number) {
-  //   current = index;
-  // }
-
   let interval: NodeJS.Timeout | null = null;
 
   function startRotation() {
@@ -51,7 +47,38 @@
     current = 3;
   }
 
-  const sections = ["about", "experience", "projects", "directory"];
+  const sections = ["about", "work", "projects", "directory"];
+
+  let activeSection: string = sections[0];
+  let mainElement: HTMLElement | null = null;
+  let ticking = false;
+  const TOP_OFFSET = 40; // pixels from the top of the main scroll area
+
+  function updateActiveSection() {
+    if (!mainElement) return;
+    const mainTop = mainElement.getBoundingClientRect().top;
+    let current = sections[0];
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      const top = el.getBoundingClientRect().top - mainTop;
+      if (top <= TOP_OFFSET) {
+        current = id;
+      } else {
+        // as soon as we find a section below the threshold, stop
+        break;
+      }
+    }
+    activeSection = current;
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(updateActiveSection);
+    }
+  }
 
   let activeSection: string = sections[0];
 
@@ -92,20 +119,35 @@
     const el = document.getElementById(id);
 
     if (el) {
-      const mainElement = document.querySelector("main");
-      if (mainElement) {
+      const mainEl = document.querySelector("main");
+      if (mainEl) {
         const rect = el.getBoundingClientRect();
-        const mainRect = mainElement.getBoundingClientRect();
-        const scrollTop = mainElement.scrollTop;
+        const mainRect = mainEl.getBoundingClientRect();
+        const scrollTop = (mainEl as HTMLElement).scrollTop;
 
         const offset = rect.top - mainRect.top + scrollTop - 30;
-        mainElement.scrollTo({
+        (mainEl as HTMLElement).scrollTo({
           top: offset,
           behavior: "smooth",
         });
       }
     }
   }
+
+  onMount(() => {
+    mainElement = document.querySelector("main");
+    if (!mainElement) return;
+    mainElement.addEventListener("scroll", onScroll, { passive: true });
+    // initialize once
+    updateActiveSection();
+  });
+
+  onDestroy(() => {
+    if (mainElement) {
+      mainElement.removeEventListener("scroll", onScroll);
+      mainElement = null;
+    }
+  });
 </script>
 
 <nav
@@ -126,11 +168,13 @@
   </div>
 
   <!-- Sections -->
-  <div class="flex flex-col mt-auto">
+  <div class="w-75 flex flex-col mt-auto">
     {#each sections as section}
       <button
         type="button"
-        class="cursor-cell text-left"
+        class="pl-1 cursor-cell text-left {activeSection === section
+          ? 'bg-[#000000] text-[#F2F0EF]'
+          : ''}"
         onclick={() => scrollToSection(section)}
       >
         <p>
