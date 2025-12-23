@@ -7,7 +7,7 @@
 
 <div class="pr-8">
   <div id="about">
-    <About className="mb-20" />
+    <About className="mb-10" />
   </div>
 
   <div id="work">

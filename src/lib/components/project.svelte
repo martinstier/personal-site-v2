@@ -22,15 +22,12 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
   <div class="flex flex-col gap-3">
     <div class="flex flex-wrap items-baseline gap-3">
-      <span
-        class="bg-[var(--project-bg)] px-2 py-0.5"
-        style={`--project-bg: ${color}`}
-      >
+      <span class="bg-[{color}] pl-1 pr-1">
         {title}
       </span>
-      <span class="text-sm">{collaboratorsText} @ {location}</span>
+      <span class="text-[28px]">@ {location}</span>
     </div>
-    <div class="text-[32px] leading-tight">{description}</div>
+    <div class="text-[42px] leading-tight">{description}</div>
   </div>
 
   <div class="relative w-full">
@@ -47,13 +44,15 @@
         onclick={next}
         draggable="false"
       />
-      <div
-        class="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center z-10"
-      >
-        <span class="text-white text-sm font-semibold"
-          >{current + 1}/{imagesList.length}</span
+      {#if imagesList.length > 1}
+        <div
+          class="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center z-10"
         >
-      </div>
+          <span class="text-white text-sm font-semibold"
+            >{current + 1}/{imagesList.length}</span
+          >
+        </div>
+      {/if}
     </div>
   </div>
 </div>
