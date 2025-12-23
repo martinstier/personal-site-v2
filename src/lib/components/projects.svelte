@@ -3,13 +3,18 @@
 </script>
 
 <div class={className}>
+  <p><span class="bg-[#4750DD] text-[#EAFFD9]">SH Staffing</span> @ CHEPS</p>
   <p>
-    Projects: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-    est laborum.
+    <span class="bg-[#F5BF0F] text-[#000000]">Infatrode</span> w/ Jack LY, Ben N,
+    Connor D @ MHacks 2025
   </p>
+  <p>
+    ⇥ Full-stack social media platform.
+    <i>"The instangramt killer."</i>
+  </p>
+  <p>
+    ⇥ A novel social media approach: mapping relationships between people,
+    things, and concepts.
+  </p>
+  <p>PeteCode</p>
 </div>

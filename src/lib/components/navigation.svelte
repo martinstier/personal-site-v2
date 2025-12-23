@@ -53,6 +53,41 @@
 
   const sections = ["about", "experience", "projects", "directory"];
 
+  let activeSection: string = sections[0];
+
+  onMount(() => {
+    const mainElement = document.querySelector("main");
+    if (!mainElement) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const id = (entry.target as HTMLElement).id;
+            if (sections.includes(id)) {
+              activeSection = id;
+            }
+          }
+        }
+      },
+      {
+        root: mainElement,
+        threshold: 0.6,
+        // Account for top padding by shrinking the top root area
+        rootMargin: "-32px 0px 0px 0px",
+      }
+    );
+
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    }
+
+    return () => observer.disconnect();
+  });
+
   function scrollToSection(id: string) {
     const el = document.getElementById(id);
 
@@ -99,7 +134,13 @@
         onclick={() => scrollToSection(section)}
       >
         <p>
-          {section.charAt(0).toUpperCase() + section.slice(1)}
+          <span
+            class={activeSection === section
+              ? "bg-[#000000] text-[#FFFFFF]"
+              : "opacity-100"}
+          >
+            {section.charAt(0).toUpperCase() + section.slice(1)}</span
+          >
         </p>
       </button>
     {/each}
