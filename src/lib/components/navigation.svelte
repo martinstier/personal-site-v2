@@ -30,10 +30,6 @@
     current = (current + 1) % images.length;
   }
 
-  // function goTo(index: number) {
-  //   current = index;
-  // }
-
   let interval: NodeJS.Timeout | null = null;
 
   function startRotation() {
@@ -51,7 +47,7 @@
     current = 3;
   }
 
-  const sections = ["about", "experience", "projects", "directory"];
+  const sections = ["about", "work", "projects", "directory"];
 
   let activeSection: string = sections[0];
   let mainElement: HTMLElement | null = null;
@@ -137,11 +133,13 @@
   </div>
 
   <!-- Sections -->
-  <div class="flex flex-col mt-auto">
+  <div class="w-75 flex flex-col mt-auto">
     {#each sections as section}
       <button
         type="button"
-        class="cursor-cell text-left {activeSection === section ? 'bg-[#000000] text-[#FFFFFF]' : ''}"
+        class="cursor-cell text-left {activeSection === section
+          ? 'bg-[#000000] text-[#F2F0EF]'
+          : ''}"
         onclick={() => scrollToSection(section)}
       >
         <p>

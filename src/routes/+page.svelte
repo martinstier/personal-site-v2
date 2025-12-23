@@ -1,6 +1,6 @@
 <script lang="ts">
   import About from "$lib/components/about.svelte";
-  import Experience from "$lib/components/experience.svelte";
+  import Work from "$lib/components/work.svelte";
   import Projects from "$lib/components/projects.svelte";
   import Directory from "$lib/components/directory.svelte";
 </script>
@@ -10,8 +10,8 @@
     <About className="mb-20" />
   </div>
 
-  <div id="experience">
-    <Experience className="mb-20" />
+  <div id="work">
+    <Work className="mb-20" />
   </div>
 
   <div id="projects">
