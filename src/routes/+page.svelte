@@ -7,18 +7,18 @@
 
 <div class="pr-8">
   <div id="about">
-    <About className="mb-10" />
+    <About className="mb-7.5" />
   </div>
 
   <div id="work">
-    <Work className="mb-20" />
+    <Work className="mb-15" />
   </div>
 
   <div id="projects">
-    <Projects className="mb-20" />
+    <Projects className="mb-15" />
   </div>
 
   <div id="directory">
-    <Directory className="mb-20" />
+    <Directory className="mb-15" />
   </div>
 </div>

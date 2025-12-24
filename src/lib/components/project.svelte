@@ -1,17 +1,15 @@
 <script lang="ts">
   export let title: string;
-  export let collaborators: string[] | string = [];
   export let location: string;
   export let description: string;
   export let images: string[] = [];
   export let color: string = "#000000";
+  export let text_color: string = "#000000";
+  export let stack: string[] = [];
 
   let current = 0;
 
   $: imagesList = Array.isArray(images) ? images : [];
-  $: collaboratorsText = Array.isArray(collaborators)
-    ? collaborators.join(", ")
-    : collaborators;
 
   function next() {
     if (imagesList.length === 0) return;
@@ -19,17 +17,19 @@
   }
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-  <div class="flex flex-col gap-3">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start mb-15">
+  <!-- Text -->
+  <div class="flex flex-col">
     <div class="flex flex-wrap items-baseline gap-3">
-      <span class="bg-[{color}] pl-1 pr-1">
+      <span class="bg-[{color}] text-[{text_color}] pl-1 pr-1">
         {title}
       </span>
       <span class="text-[28px]">@ {location}</span>
     </div>
-    <div class="text-[42px] leading-tight">{description}</div>
+    <div class="text-[42px]">{description}</div>
   </div>
 
+  <!-- Images -->
   <div class="relative w-full">
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <div class="relative w-full aspect-video overflow-hidden">
@@ -51,6 +51,15 @@
           <span class="text-white text-sm font-semibold"
             >{current + 1}/{imagesList.length}</span
           >
+        </div>
+      {/if}
+      {#if stack && stack.length}
+        <div class="absolute bottom-4 left-4 z-10 flex flex-wrap gap-2 max-w-full">
+          {#each stack as item}
+            <span class="px-2 py-1 rounded-full  bg-black/50 text-white text-sm backdrop-blur-sm">
+              {item}
+            </span>
+          {/each}
         </div>
       {/if}
     </div>
