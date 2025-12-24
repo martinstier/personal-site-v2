@@ -19,6 +19,6 @@
     description="Mapping relationships between people, things, and concepts (socially)."
     images={["/images/infatrode.gif"]}
     color="#F5BF0F"
-    stack={["Svelte", "Supabase", "Full-stack"]}
+    stack={["Svelte", "Supabase"]}
   />
 </div>
