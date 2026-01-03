@@ -1,6 +1,6 @@
 <script lang="ts">
   export let site: string;
-  export let logo: string;
+  export let logo: string = "";
   export let color: string;
   export let text_color: string;
   export let link: string;
@@ -25,16 +25,19 @@
 </script>
 
 <span
-  style="background-color: {color}; color: {text_color};"
-  class="cursor-none"
+  style="background-color: {color}; color: {text_color}; cursor: {logo
+    ? 'none'
+    : 'alias'};"
   on:mousemove={handleMouseMove}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
   role="presentation"
-  ><a href={link} target="_blank" class="cursor-none">{site}</a>
-</span>
-
-{#if isHovering}
+  ><a href={link} target="_blank" style="cursor: {logo ? 'none' : 'alias'};"
+    >{site}</a
+  >
+  <!-- Don't add whitespace -->
+  <!-- Whitespace here renders on the page. -->
+</span>{#if isHovering && logo}
   <img
     src={logo}
     alt="cursor"

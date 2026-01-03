@@ -10,17 +10,17 @@
 <div class={className}>
   <p>
     Find me on
+    <!-- logo="/images/linkedin.png" -->
     <Reference
       site="LinkedIn"
-      logo="/images/linkedin.png"
       color="#4750DD"
-      text_color="#EAFFD9"
       link="http://linkedin.com/in/martin-stier"
+      text_color="#EAFFD9"
       size="30"
     ></Reference>,
+    <!-- logo="/images/email.png" -->
     <Reference
-      site="Email"
-      logo="/images/email.png"
+      site="email"
       color="#F3000E"
       text_color="#EAFFD9"
       link="mailto:mastier@umich.edu"
@@ -34,17 +34,18 @@
       link="https://letterboxd.com/marticicleta/"
       size="30"
     ></Reference>. Additionally, here's my
+    <!-- logo="/images/file.png" -->
     <Reference
       site="resume"
-      logo="/images/file.png"
       color="#F5BF0F"
       text_color="#000000"
-      link=""
+      logo=""
+      link="https://drive.google.com/file/d/1xj2ojdyRkvwwlcHOKEhnNENTHUsMVijl/view?usp=sharing"
       size="30"
     ></Reference>.
   </p>
   <p>
-    See also: friends with whom I maintain enduring and generative
+    <i>See also:</i> friends with whom I maintain enduring and generative
     collaborations.
   </p>
   <p>
