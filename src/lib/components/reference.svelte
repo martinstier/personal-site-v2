@@ -3,11 +3,42 @@
   export let logo: string;
   export let color: string;
   export let text_color: string;
+  export let link: string;
+  export let size: string;
+
+  let isHovering = false;
+  let cursorX = 0;
+  let cursorY = 0;
+
+  function handleMouseMove(e: MouseEvent) {
+    cursorX = e.clientX;
+    cursorY = e.clientY;
+  }
+
+  function handleMouseEnter() {
+    isHovering = true;
+  }
+
+  function handleMouseLeave() {
+    isHovering = false;
+  }
 </script>
 
 <span
-  class="bg-[{color}] text-[{text_color}]"
-  style="cursor: url('{logo}') 16 16, auto;"
->
-  {site}
+  style="background-color: {color}; color: {text_color};"
+  class="cursor-none"
+  on:mousemove={handleMouseMove}
+  on:mouseenter={handleMouseEnter}
+  on:mouseleave={handleMouseLeave}
+  role="presentation"
+  ><a href={link} target="_blank" class="cursor-none">{site}</a>
 </span>
+
+{#if isHovering}
+  <img
+    src={logo}
+    alt="cursor"
+    class="pointer-events-none fixed z-[9999]"
+    style="left: {cursorX}px; top: {cursorY}px; transform: translate(-50%, -50%); height: {size}px; width: auto;"
+  />
+{/if}
