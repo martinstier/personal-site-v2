@@ -18,7 +18,7 @@
         >PromethistAI</a
       ></span
     >, researched at the
-    <span class="bg-[#248C54] text-[#EAFFD9] inline-flex items-baseline"
+    <span class="bg-[#248C54] text-[#EAFFD9] items-baseline"
       ><a href="https://isr.umich.edu/" target="_blank" class="cursor-alias"
         >Institute for Social Research</a
       >

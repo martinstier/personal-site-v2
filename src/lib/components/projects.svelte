@@ -7,7 +7,7 @@
   <Project
     title="SATT"
     location="CHEPS"
-    description="A staff management platform for better scheduling, tracking, and workload distribution in public hospitals."
+    description="A staff-management platform for better scheduling, tracking, and workload distribution in public hospitals."
     images={["/images/infatrode.gif"]}
     color="#4750DD"
     text_color="#EAFFD9"
@@ -16,9 +16,18 @@
   <Project
     title="Infatrode"
     location="MHacks '25"
-    description="Mapping relationships between people, things, and concepts (socially)."
+    description="A graph-based knowledge platform that blends personal journaling with a social network."
     images={["/images/infatrode.gif"]}
     color="#F5BF0F"
-    stack={["Svelte", "Supabase"]}
+    stack={["Svelte", "Supabase", "TypeScript"]}
+  />
+  <Project
+    title="Social Media"
+    location=""
+    description="Instagram-style web app with a dynamic, client-side feed powered by JavaScript and a REST API."
+    images={["React.js"]}
+    color="#F3000E"
+    text_color="#EAFFD9"
+    stack={["Python", "React.js", "SQL", "Jinja2", "Flask"]}
   />
 </div>

@@ -24,9 +24,11 @@
       <span class="bg-[{color}] text-[{text_color}] pl-1 pr-1">
         {title}
       </span>
-      <span class="text-[28px]">@ {location}</span>
+      {#if location}
+        <span class="text-[28px]">@ {location}</span>
+      {/if}
     </div>
-    <div class="text-[42px]">{description}</div>
+    <div class="text-[35px]">{description}</div>
   </div>
 
   <!-- Images -->
@@ -54,9 +56,13 @@
         </div>
       {/if}
       {#if stack && stack.length}
-        <div class="absolute bottom-4 left-4 z-10 flex flex-wrap gap-2 max-w-full">
+        <div
+          class="absolute bottom-4 left-4 z-10 flex flex-wrap gap-2 max-w-full"
+        >
           {#each stack as item}
-            <span class="px-2 py-1 rounded-full  bg-black/50 text-white text-sm backdrop-blur-sm">
+            <span
+              class="px-2 py-1 rounded-full bg-black/50 text-white text-sm backdrop-blur-sm"
+            >
               {item}
             </span>
           {/each}
