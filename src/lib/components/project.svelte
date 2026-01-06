@@ -40,7 +40,8 @@
       <img
         src={imagesList[current]}
         alt={title}
-        class="w-full h-full object-contain select-none {imagesList.length > 1
+        class="w-full h-full object-contain object-left select-none {imagesList.length >
+        1
           ? 'cursor-pointer'
           : ''}"
         onclick={next}

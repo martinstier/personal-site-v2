@@ -22,12 +22,12 @@
     stack={["Svelte", "Supabase", "TypeScript"]}
   />
   <Project
-    title="Social Media"
+    title="Insta Clone"
     location=""
     description="Instagram-style web app with a dynamic, client-side feed powered by JavaScript and a REST API."
-    images={["React.js"]}
+    images={["/images/insta_demo_cropped.gif"]}
     color="#F3000E"
     text_color="#EAFFD9"
-    stack={["Python", "React.js", "SQL", "Jinja2", "Flask"]}
+    stack={["Python", "React.js", "SQL", "Jinja2", "Flask", "AWS"]}
   />
 </div>

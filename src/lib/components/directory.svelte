@@ -44,12 +44,12 @@
       size="30"
     ></Reference>.
   </p>
-  <p>
+  <!-- <p>
     <i>See also:</i> friends with whom I maintain enduring and generative
     collaborations.
   </p>
   <p>
     Ben Antonow, Nate Boxer, Hugh Jacks, Braden Leung, Jack Lille-Yerrington,
     Ben Neumaier
-  </p>
+  </p> -->
 </div>
