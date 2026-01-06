@@ -7,6 +7,7 @@
 </script>
 
 <svelte:head>
+  <title>Martín Stier</title>
   <link rel="icon" href={favicon} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
