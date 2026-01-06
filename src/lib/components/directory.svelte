@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
 
-<div class={className} style="position: sticky; top: 40px;">
+<div class={className}>
   <p>
     Find me on
     <!-- logo="/images/linkedin.png" -->
