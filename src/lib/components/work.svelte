@@ -4,20 +4,19 @@
 
 <div class={className}>
   <p>
-    Martín is a software engineer at
-    <span class="bg-[#248C54] text-[#EAFFD9]"
+    Martín is currently a software engineer at
+    <span class="bg-[#F3000E] text-[#EAFFD9]"
       ><a
         href="https://cheps.engin.umich.edu/"
         target="_blank"
         class="cursor-alias">CHEPS</a
       ></span
-    >, building staff management software for Michigan hospitals. He has also
-    interned at
+    >, building software for Michigan hospitals. He has also interned at
     <span class="bg-[#4750DD] text-[#EAFFD9] inline-flex items-baseline"
       ><a href="https://promethist.ai/" target="_blank" class="cursor-alias"
         >PromethistAI</a
       ></span
-    >, researched at the
+    >, worked at the
     <span class="bg-[#248C54] text-[#EAFFD9] items-baseline"
       ><a href="https://isr.umich.edu/" target="_blank" class="cursor-alias"
         >Institute for Social Research</a

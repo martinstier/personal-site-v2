@@ -25,7 +25,15 @@
       text_color="#EAFFD9"
       link="mailto:mastier@umich.edu"
       size="20"
-    ></Reference>, or
+    ></Reference>,
+    <Reference
+      site="GitHub"
+      color="#F5BF0F"
+      text_color=""
+      link="https://github.com/martinstier"
+      size="30"
+    ></Reference>
+    or
     <Reference
       site="Letterboxd"
       logo="/images/boxd.png"
@@ -44,12 +52,4 @@
       size="30"
     ></Reference>.
   </p>
-  <!-- <p>
-    <i>See also:</i> friends with whom I maintain enduring and generative
-    collaborations.
-  </p>
-  <p>
-    Ben Antonow, Nate Boxer, Hugh Jacks, Braden Leung, Jack Lille-Yerrington,
-    Ben Neumaier
-  </p> -->
 </div>
