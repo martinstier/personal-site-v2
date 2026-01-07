@@ -5,8 +5,6 @@
   export let className: string = "";
 </script>
 
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
-
 <div class={className}>
   <p>
     Find me on
