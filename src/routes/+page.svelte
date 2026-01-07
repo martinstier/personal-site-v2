@@ -22,6 +22,6 @@
     <Directory className="mb-15" />
   </div>
   <footer class="mb-3 text-[20px] opacity-70">
-    Built with SvelteKit and Tailwind CSS · Deployed on Vercel.
+    Built with SvelteKit and Tailwind CSS · Deployed on Vercel
   </footer>
 </div>

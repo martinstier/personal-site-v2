@@ -48,7 +48,7 @@
       color="#F5BF0F"
       text_color="#000000"
       logo=""
-      link="https://drive.google.com/file/d/1xj2ojdyRkvwwlcHOKEhnNENTHUsMVijl/view?usp=sharing"
+      link="/documents/Resume_MASTIER.pdf"
       size="30"
     ></Reference>.
   </p>
