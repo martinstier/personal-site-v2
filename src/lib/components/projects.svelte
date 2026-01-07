@@ -8,7 +8,7 @@
     title="SATT"
     location="CHEPS"
     description="A staff-management platform for better scheduling, tracking, and workload distribution in public hospitals."
-    images={["/images/infatrode.gif"]}
+    images={["/images/satt_demo.gif"]}
     color="#4750DD"
     text_color="#EAFFD9"
     stack={["VBA", "SQL"]}

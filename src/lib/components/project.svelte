@@ -32,7 +32,7 @@
   </div>
 
   <!-- Images -->
-  <div class="relative w-full">
+  <div class="relative w-full w-full">
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <div class="relative w-full aspect-video overflow-hidden">
       <!-- svelte-ignore a11y_click_events_have_key_events -->

@@ -36,6 +36,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/.DS_Store" | "/images/.DS_Store" | "/images/boxd.png" | "/images/email.png" | "/images/file.png" | "/images/img0.JPG" | "/images/img10.jpg" | "/images/img11.JPG" | "/images/img12.jpeg" | "/images/img13.jpeg" | "/images/img14.JPG" | "/images/img16.jpeg" | "/images/img17.jpg" | "/images/img3.JPG" | "/images/img4.JPG" | "/images/img8.jpg" | "/images/img9.JPG" | "/images/infatrode.gif" | "/images/insta_demo.gif" | "/images/insta_demo_cropped.gif" | "/images/linkedin.png" | "/robots.txt" | "/videos/.DS_Store" | "/videos/instademo.mp4" | string & {};
+		Asset(): "/.DS_Store" | "/documents/Resume_MASTIER.pdf" | "/images/.DS_Store" | "/images/boxd.png" | "/images/email.png" | "/images/file.png" | "/images/img0.JPG" | "/images/img10.jpg" | "/images/img11.JPG" | "/images/img12.jpeg" | "/images/img13.jpeg" | "/images/img14.JPG" | "/images/img16.jpeg" | "/images/img17.jpg" | "/images/img3.JPG" | "/images/img4.JPG" | "/images/img8.jpg" | "/images/img9.JPG" | "/images/infatrode.gif" | "/images/insta_demo.gif" | "/images/insta_demo_cropped.gif" | "/images/linkedin.png" | "/images/satt_demo.gif" | "/robots.txt" | "/videos/.DS_Store" | "/videos/instademo.mp4" | string & {};
 	}
 }
