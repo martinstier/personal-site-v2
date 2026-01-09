@@ -18,7 +18,7 @@
     "/images/img11.JPG",
     "/images/img12.jpeg",
     "/images/img13.jpeg",
-    "/images/img14.JPG",
+    // "/images/img14.JPG",
     // "/images/img15.JPG",
     "/images/img16.jpeg",
     // "/images/img17.jpg",
