@@ -1,5 +1,6 @@
 <script lang="ts">
   export let title: string;
+  export let url: string;
   export let location: string;
   export let description: string;
   export let images: string[] = [];
@@ -22,7 +23,11 @@
   <div class="flex flex-col">
     <div class="flex flex-wrap items-baseline gap-3">
       <span class="bg-[{color}] text-[{text_color}] pl-1 pr-1">
-        {title}
+        {#if url}
+          <a href={url} class="cursor-alias" target="_blank">{title}</a>
+        {:else}
+          <span>{title}</span>
+        {/if}
       </span>
       {#if location}
         <span class="text-[28px]">@ {location}</span>
